@@ -26,7 +26,7 @@
     Master Data
   </div>
 
-  <!-- <li class="nav-item {{ Request::is('dashboard/categories*') || Request::is('dashboard/products*') ? 'active' : '' }}">
+  <li class="nav-item {{ Request::is('dashboard/categories*') || Request::is('dashboard/products*') ? 'active' : '' }}">
     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
       aria-controls="collapseTwo">
       <i class="fas fa-fw fa-cogs"></i>
@@ -36,15 +36,15 @@
       <div class="bg-white py-2 collapse-inner rounded">
         <h6 class="collapse-header">List Alat:</h6>
         <a class="collapse-item {{ Request::is('dashboard/categories*') ? 'active' : '' }}"
-          href="">Dump Truck</a>
-        <a class="collapse-item {{ Request::is('dashboard/products*') ? 'active' : '' }}"
-          href="">Produk</a>
+          href="{{ route('categories.index') }}">Kategori Alat</a>
+        <a class="collapse-item {{ Request::is('dashboard/units*') ? 'active' : '' }}"
+          href="{{ route('units.index') }}">Unit</a>
       </div>
     </div>
-  </li> -->
+  </li> 
 
-  <li class="nav-item {{ Request::is('dashboard/discounts*') ? 'active' : '' }}">
-    <a class="nav-link" href="">
+  <li class="nav-item {{ Request::is('dashboard/categories*') ? 'active' : '' }}">
+    <a class="nav-link" href="{{ route('categories.index') }}">
       <i class="fas fa-fw fa-cogs"></i>
       <span>Data Alat</span></a>
   </li>
