@@ -12,8 +12,9 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('units', function (Blueprint $table) {
-            $table->string('id')->primary();
+            $table->id();
             // $table->foreignId('category_id');
+            $table->string('unit_id');
             $table->string('unit_name');
             $table->string('owner');
             $table->string('capacity');

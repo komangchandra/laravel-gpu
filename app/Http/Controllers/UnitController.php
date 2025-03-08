@@ -10,6 +10,7 @@ class UnitController extends Controller
     public function index()
     {
         $units = Unit::all();
+        // dd($units);
         return view('dashboard.units.index', compact('units'));
     }
 
@@ -21,14 +22,14 @@ class UnitController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'id' => 'required',
+            'unit_id' => 'required',
             'unit_name' => 'required',
             'owner' => 'required',
             'capacity' => 'required',
         ]);
 
         Unit::create([
-            'id' => $request->id,
+            'unit_id' => $request->unit_id,
             'unit_name' => $request->unit_name,
             'owner' => $request->owner,
             'capacity' => $request->capacity,

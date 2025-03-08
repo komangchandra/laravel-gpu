@@ -43,10 +43,10 @@
     </div>
   </li> 
 
-  <li class="nav-item {{ Request::is('dashboard/categories*') ? 'active' : '' }}">
-    <a class="nav-link" href="{{ route('categories.index') }}">
-      <i class="fas fa-fw fa-cogs"></i>
-      <span>Data Alat</span></a>
+  <li class="nav-item {{ Request::is('dashboard/activities*') ? 'active' : '' }}">
+    <a class="nav-link" href="{{ route('activities.index') }}">
+      <i class="fas fa-fw fa-check"></i>
+      <span>Data Activity</span></a>
   </li>
 
   <!-- <li class="nav-item {{ Request::is('dashboard/contacts*') ? 'active' : '' }}">

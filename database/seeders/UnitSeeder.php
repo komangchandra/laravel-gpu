@@ -74,7 +74,7 @@ class UnitSeeder extends Seeder
 
         foreach ($units as $unit) {
             Unit::create([
-                'id' => $unit[0],
+                'unit_id' => $unit[0],
                 'unit_name' => $unit[1],
                 'owner' => $unit[2],
                 'capacity' => $unit[3],

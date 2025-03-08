@@ -4,12 +4,12 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Unit extends Model
+class Activity extends Model
 {
     protected $guarded = [];
 
-    public function activities()
+    public function unit()
     {
-        return $this->hasMany(Activity::class);
+        return $this->belongsTo(Unit::class);
     }
 }

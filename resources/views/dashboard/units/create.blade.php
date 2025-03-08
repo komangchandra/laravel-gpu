@@ -23,9 +23,9 @@
             <form action="{{ route('units.store') }}" method="POST" enctype="multipart/form-data">
               @csrf
               <div class="mb-3 row">
-                <label for="id" class="col-sm-2 col-form-label">ID Unit</label>
+                <label for="unit_id" class="col-sm-2 col-form-label">ID Unit</label>
                 <div class="col-sm-2">
-                  <input type="text" class="form-control" id="id" name="id" required>
+                  <input type="text" class="form-control" id="unit_id" name="unit_id" required>
                 </div>
               </div>
               <div class="mb-3 row">
