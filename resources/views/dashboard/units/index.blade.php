@@ -26,7 +26,7 @@
           <thead>
             <tr>
               <th>#</th>
-              <th>No Unit</th>
+              <th>ID Barcode</th>
               <th>Nama Unit</th>
               <th>Owner</th>
               <th>Kapasitas</th>
@@ -36,7 +36,7 @@
           <tfoot>
             <tr>
               <th>#</th>
-              <th>No Unit</th>
+              <th>ID Barcode</th>
               <th>Nama Unit</th>
               <th>Owner</th>
               <th>Kapasitas</th>

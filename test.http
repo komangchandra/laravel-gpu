@@ -1,0 +1,23 @@
+
+
+POST http://localhost:8000/api/transactions HTTP/1.1
+content-type: application/json
+
+{
+  "time": "14:45",
+  "hm": "1010",
+  "vol": "200",
+  "initial_flow": "1200",
+  "final_flow": "1400",
+  "driver": "Mr Bis",
+  "location": "PIT GRIYA",
+  "user_id": 2,
+  "unit_id": 3
+}
+
+
+###
+
+GET http://localhost:8000/api/transactions HTTP/1.1
+
+###

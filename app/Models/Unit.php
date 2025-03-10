@@ -8,8 +8,8 @@ class Unit extends Model
 {
     protected $guarded = [];
 
-    public function activities()
+    public function transactions()
     {
-        return $this->hasMany(Activity::class);
+        return $this->hasMany(Transaction::class);
     }
 }

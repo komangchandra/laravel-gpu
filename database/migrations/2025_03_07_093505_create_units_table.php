@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('unit_id');
             $table->string('unit_name');
             $table->string('owner');
-            $table->string('capacity');
+            $table->string('area');
             $table->timestamps();
         });
     }

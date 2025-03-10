@@ -26,7 +26,7 @@
     Master Data
   </div>
 
-  <li class="nav-item {{ Request::is('dashboard/categories*') || Request::is('dashboard/products*') ? 'active' : '' }}">
+  {{-- <li class="nav-item {{ Request::is('dashboard/categories*') || Request::is('dashboard/products*') ? 'active' : '' }}">
     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
       aria-controls="collapseTwo">
       <i class="fas fa-fw fa-cogs"></i>
@@ -36,17 +36,23 @@
       <div class="bg-white py-2 collapse-inner rounded">
         <h6 class="collapse-header">List Alat:</h6>
         <a class="collapse-item {{ Request::is('dashboard/categories*') ? 'active' : '' }}"
-          href="{{ route('categories.index') }}">Kategori Alat</a>
+          href="x">Kategori Alat</a>
         <a class="collapse-item {{ Request::is('dashboard/units*') ? 'active' : '' }}"
           href="{{ route('units.index') }}">Unit</a>
       </div>
     </div>
-  </li> 
+  </li>  --}}
 
   <li class="nav-item {{ Request::is('dashboard/activities*') ? 'active' : '' }}">
-    <a class="nav-link" href="{{ route('activities.index') }}">
-      <i class="fas fa-fw fa-check"></i>
-      <span>Data Activity</span></a>
+    <a class="nav-link" href="{{ route('units.index') }}">
+      <i class="fas fa-fw fa-cogs"></i>
+      <span>Data Unit</span></a>
+  </li>
+
+  <li class="nav-item {{ Request::is('dashboard/deliveries*') ? 'active' : '' }}">
+    <a class="nav-link" href="{{ route('transaction.index') }}">
+      <i class="fas fa-fw fa-truck"></i>
+      <span>Pengisian Unit</span></a>
   </li>
 
   <!-- <li class="nav-item {{ Request::is('dashboard/contacts*') ? 'active' : '' }}">
@@ -59,12 +65,6 @@
     <a class="nav-link" href="('payments.index') }}">
       <i class="fas fa-fw fa-credit-card"></i>
       <span>Metode Pembayaran</span></a>
-  </li> -->
-
-  <!-- <li class="nav-item {{ Request::is('dashboard/deliveries*') ? 'active' : '' }}">
-    <a class="nav-link" href="('deliveries.index') }}">
-      <i class="fas fa-fw fa-truck"></i>
-      <span>Metode Pengiriman</span></a>
   </li> -->
 
   <!-- <li class="nav-item {{ Request::is('dashboard/sales*') ? 'active' : '' }}">

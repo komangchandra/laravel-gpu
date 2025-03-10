@@ -7,8 +7,8 @@
 @endpush
 
 @section('content')
-  <h1 class="h3 mb-4 text-gray-800">Activity</h1>
-  <a class="btn btn-primary mb-3" href="{{ route('activities.create') }}">Tambahkan Activity</a>
+  <h1 class="h3 mb-4 text-gray-800">Transaksi</h1>
+  <a class="btn btn-primary mb-3" href="">Tambahkan Activity</a>
 
   @if (session('success'))
     <div class="alert alert-success">
@@ -26,50 +26,49 @@
           <thead>
             <tr>
               <th>#</th>
-              <th>Tanggal</th>
-              <th>Shift</th>
-              <th>PIT</th>
-              <th>Activity</th>
-              <th>Unit</th>
-              <th>Ritase</th>
-              <th>Mulai</th>
-              <th>Selesai</th>
+              <th>No Unit</th>
+              <th>Divisi</th>
+              <th>Jam</th>
+              <th>HM</th>
+              <th>Vol</th>
+              <th>Flow Awal</th>
+              <th>Flow Akhir</th>
+              <th>Fuel Man</th>
+              <th>Driver</th>
+              <th>Lokasi</th>
               <th>##</th>
             </tr>
           </thead>
           <tfoot>
             <tr>
               <th>#</th>
-              <th>Tanggal</th>
-              <th>Shift</th>
-              <th>PIT</th>
-              <th>Activity</th>
-              <th>Unit</th>
-              <th>Ritase</th>
-              <th>Mulai</th>
-              <th>Selesai</th>
+              <th>No Unit</th>
+              <th>Divisi</th>
+              <th>Jam</th>
+              <th>HM</th>
+              <th>Vol</th>
+              <th>Flow Awal</th>
+              <th>Flow Akhir</th>
+              <th>Fuel Man</th>
+              <th>Driver</th>
+              <th>Lokasi</th>
               <th>##</th>
             </tr>
           </tfoot>
           <tbody>
-            @forelse ($activities as $activity)
+            @forelse ($transactions as $transaction)
               <tr>
                 <td>{{ $loop->iteration }}</td>
-                <td>{{ $activity->date }}</td>
-                <td>{{ $activity->shift }}</td>
-                <td>{{ $activity->pit }}</td>
-                <td>{{ $activity->activity }}</td>
-                <td>
-                  Exca: {{ $activity->exca }}
-                  DT 1: {{ $activity->unit_id_1 }}
-                  {{ $activity->unit_id_2 }}
-                  {{ $activity->unit_id_3 }}
-                  {{ $activity->unit_id_4 }}
-                  {{ $activity->unit_id_5 }}
-                </td>
-                <td>{{ $activity->ritase }}</td>
-                <td>{{ $activity->start }}</td>
-                <td>{{ $activity->finish }}</td>
+                <td>{{ $transaction->unit->unit_id }}</td>
+                <td>{{ $transaction->unit->owner }}</td>
+                <td>{{ $transaction->time }}</td>
+                <td>{{ $transaction->hm }}</td>
+                <td>{{ $transaction->vol }}</td>
+                <td>{{ $transaction->initial_flow }}</td>
+                <td>{{ $transaction->final_flow }}</td>
+                <td>{{ $transaction->user->name }}</td>
+                <td>{{ $transaction->driver }}</td>
+                <td>{{ $transaction->location }}</td>
                 <td>
                   <form onsubmit="return confirm('Yakin ingin menghapus data?');"
                     action="" method="POST">
