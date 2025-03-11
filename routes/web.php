@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\UnitController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -17,6 +18,12 @@ Route::controller(UnitController::class)->group(function () {
     Route::get('/dashboard/units', 'index')->name('units.index')->middleware('auth');
     Route::get('/dashboard/units/create', 'create')->name('units.create')->middleware('auth');;
     Route::post('/dashboard/units/store', 'store')->name('units.store')->middleware('auth');;
+});
+
+Route::controller(UserController::class)->group(function () {
+    Route::get('/dashboard/users', 'index')->name('users.index')->middleware('auth');
+    // Route::get('/dashboard/units/create', 'create')->name('units.create')->middleware('auth');;
+    // Route::post('/dashboard/units/store', 'store')->name('units.store')->middleware('auth');;
 });
 
 Route::controller(TransactionController::class)->group(function () {

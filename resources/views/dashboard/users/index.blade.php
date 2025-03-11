@@ -26,22 +26,25 @@
           <thead>
             <tr>
               <th>#</th>
-              <th>Nama Kategori</th>
-              <th>Aksi</th>
+              <th>Nama Fuel Man</th>
+              <th>Email Login</th>
+              <th>##</th>
             </tr>
           </thead>
           <tfoot>
             <tr>
               <th>#</th>
-              <th>Nama Kategori</th>
-              <th>Aksi</th>
+              <th>Nama Fuel Man</th>
+              <th>Email Login</th>
+              <th>##</th>
             </tr>
           </tfoot>
           <tbody>
-            @forelse ($categories as $category)
+            @forelse ($users as $user)
               <tr>
                 <td>{{ $loop->iteration }}</td>
-                <td>{{ $category->unit_category_name }}</td>
+                <td>{{ $user->name }}</td>
+                <td>{{ $user->email }}</td>
                 <td>
                   {{-- <form onsubmit="return confirm('Yakin ingin menghapus data?');"
                     action="{{ route('categories.destroy', $category->id) }}" method="POST">

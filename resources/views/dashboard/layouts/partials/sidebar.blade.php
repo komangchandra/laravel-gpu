@@ -52,14 +52,14 @@
   <li class="nav-item {{ Request::is('dashboard/deliveries*') ? 'active' : '' }}">
     <a class="nav-link" href="{{ route('transaction.index') }}">
       <i class="fas fa-fw fa-truck"></i>
-      <span>Pengisian Unit</span></a>
+      <span>Unit Pengisian</span></a>
   </li>
 
-  <!-- <li class="nav-item {{ Request::is('dashboard/contacts*') ? 'active' : '' }}">
-    <a class="nav-link" href="('contacts.index') }}">
-      <i class="fas fa-fw fa-phone"></i>
-      <span>Data Narahubung</span></a>
-  </li> -->
+  <li class="nav-item {{ Request::is('dashboard/users*') ? 'active' : '' }}">
+    <a class="nav-link" href="{{ route('users.index') }}">
+      <i class="fas fa-fw fa-user"></i>
+      <span>Data Fuel Man</span></a>
+  </li> 
 
   <!-- <li class="nav-item {{ Request::is('dashboard/payments*') ? 'active' : '' }}">
     <a class="nav-link" href="('payments.index') }}">
