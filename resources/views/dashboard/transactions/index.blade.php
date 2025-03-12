@@ -8,7 +8,7 @@
 
 @section('content')
   <h1 class="h3 mb-4 text-gray-800">Transaksi</h1>
-  <a class="btn btn-primary mb-3" href="">Tambahkan Activity</a>
+  {{-- <a class="btn btn-primary mb-3" href="">Tambahkan Activity</a> --}}
 
   @if (session('success'))
     <div class="alert alert-success">

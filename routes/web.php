@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FuelTruckController;
 use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\UnitController;
 use App\Http\Controllers\UserController;
@@ -26,9 +27,16 @@ Route::controller(UserController::class)->group(function () {
     // Route::post('/dashboard/units/store', 'store')->name('units.store')->middleware('auth');;
 });
 
-Route::controller(TransactionController::class)->group(function () {
-    Route::get('/dashboard/transactions', 'index')->name('transaction.index')->middleware('auth');
+Route::controller(FuelTruckController::class)->group(function () {
+    Route::get('/dashboard/fuel-trucks', 'index')->name('fuels.index')->middleware('auth');
+    Route::get('/dashboard/fuel-trucks/create', 'create')->name('fuels.create')->middleware('auth');
+    Route::post('/dashboard/fuel-trucks/store', 'store')->name('fuels.store')->middleware('auth');
 });
+
+Route::controller(TransactionController::class)->group(function () {
+    Route::get('/dashboard/transactions', 'index')->name('transactions.index')->middleware('auth');
+});
+
 
 // Route::get('/dashboard/units/{contact}/edit', 'edit')->name('units.edit');
 // Route::put('/dashboard/units/{contact}', 'update')->name('units.update');

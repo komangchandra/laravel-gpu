@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('fuel_trucks', function (Blueprint $table) {
             $table->id();
+            $table->string('fuel_truck_id');
             $table->string('fuel_truck_name');
             $table->integer('volume');
             $table->integer('total_flow');

@@ -21,3 +21,21 @@ content-type: application/json
 GET http://localhost:8000/api/transactions HTTP/1.1
 
 ###
+
+POST http://localhost:8000/api/login HTTP/1.1
+content-type: application/json
+
+{
+    "email": "admin@gmail.com",
+    "password": "admin123"
+}
+
+###
+
+POST http://localhost:8000/api/logout HTTP/1.1
+Authorization: Bearer 2|65ux1nyQvoJRX5vr1onCl4UPTLbbo1LYlM7Z5sIE0fe52664
+Accept: application/json
+
+
+###
+GET http://localhost:8000/api/units/HBP102

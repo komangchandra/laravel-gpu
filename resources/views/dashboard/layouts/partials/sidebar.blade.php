@@ -43,16 +43,16 @@
     </div>
   </li>  --}}
 
-  <li class="nav-item {{ Request::is('dashboard/activities*') ? 'active' : '' }}">
+  <li class="nav-item {{ Request::is('dashboard/units*') ? 'active' : '' }}">
     <a class="nav-link" href="{{ route('units.index') }}">
       <i class="fas fa-fw fa-cogs"></i>
       <span>Data Unit</span></a>
   </li>
 
-  <li class="nav-item {{ Request::is('dashboard/deliveries*') ? 'active' : '' }}">
-    <a class="nav-link" href="{{ route('transaction.index') }}">
+  <li class="nav-item {{ Request::is('dashboard/fuel-trucks*') ? 'active' : '' }}">
+    <a class="nav-link" href="{{ route('fuels.index') }}">
       <i class="fas fa-fw fa-truck"></i>
-      <span>Unit Pengisian</span></a>
+      <span>Fuel Truck</span></a>
   </li>
 
   <li class="nav-item {{ Request::is('dashboard/users*') ? 'active' : '' }}">
@@ -61,11 +61,11 @@
       <span>Data Fuel Man</span></a>
   </li> 
 
-  <!-- <li class="nav-item {{ Request::is('dashboard/payments*') ? 'active' : '' }}">
-    <a class="nav-link" href="('payments.index') }}">
+  <li class="nav-item {{ Request::is('dashboard/transactions*') ? 'active' : '' }}">
+    <a class="nav-link" href="{{ route('transactions.index') }}">
       <i class="fas fa-fw fa-credit-card"></i>
-      <span>Metode Pembayaran</span></a>
-  </li> -->
+      <span>Transaksi Solar</span></a>
+  </li>
 
   <!-- <li class="nav-item {{ Request::is('dashboard/sales*') ? 'active' : '' }}">
     <a class="nav-link" href="('sales.index') }}">
