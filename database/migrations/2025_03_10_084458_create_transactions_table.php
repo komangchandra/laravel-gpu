@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('location');
             $table->foreignId('user_id');
             $table->foreignId('unit_id');
-            $table->foreignId('fuel_truck_id');
+            // $table->foreignId('fuel_truck_id');
             $table->timestamps();
         });
     }

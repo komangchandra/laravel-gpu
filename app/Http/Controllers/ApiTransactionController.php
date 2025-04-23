@@ -18,15 +18,15 @@ class ApiTransactionController extends Controller
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'time' => 'required|string',
-            'hm' => 'required|string',
-            'vol' => 'required|string',
-            'initial_flow' => 'required|string',
-            'final_flow' => 'required|string',
-            'driver' => 'required|string',
-            'location' => 'required|string',
-            'user_id' => 'required|exists:users,id',
-            'unit_id' => 'required|exists:units,id',
+            'time' => 'required',
+            'hm' => 'required',
+            'vol' => 'required',
+            'initial_flow' => 'required',
+            'final_flow' => 'required',
+            'driver' => 'required',
+            'location' => 'required',
+            'user_id' => 'required',
+            'unit_id' => 'required',
         ]);
 
         if ($validator->fails()) {
