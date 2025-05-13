@@ -7,8 +7,8 @@
 @endpush
 
 @section('content')
-  <h1 class="h3 mb-4 text-gray-800">Kategori Alat</h1>
-  <a class="btn btn-primary mb-3" href="}">Tambahkan Kategori</a>
+  <h1 class="h3 mb-4 text-gray-800">Fuel Man</h1>
+  {{-- <a class="btn btn-primary mb-3" href="}">Tambahkan Fuel Man</a> --}}
 
   @if (session('success'))
     <div class="alert alert-success">
@@ -18,7 +18,7 @@
 
   <div class="card shad ow mb-4">
     <div class="card-header py-3">
-      <h6 class="m-0 font-weight-bold text-primary">Tabel Kategori Unit</h6>
+      <h6 class="m-0 font-weight-bold text-primary">Tabel Fuel Man</h6>
     </div>
     <div class="card-body">
       <div class="table-responsive">

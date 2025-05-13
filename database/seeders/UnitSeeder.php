@@ -70,6 +70,33 @@ class UnitSeeder extends Seeder
             ['RD6106', 'Dump Truck Wide Body XCMG XGA5902D3T', 'KMP', '20'],
             ['RD6107', 'Dump Truck Wide Body XCMG XGA5902D3T', 'KMP', '20'],
             ['RD6108', 'Dump Truck Wide Body XCMG XGA5902D3T', 'KMP', '20'],
+            ['LV 01 - BM 1164 AAF', 'Mitsubishi Pajero GLX', 'SEDAYU', '20'],
+            ['LV 02 - BM 8237 QJ', 'Mitsubishi Triton DC GLS', 'SEDAYU', '20'],
+            ['LV 03 - BM 8235 QJ', 'Mitsubishi Triton SC HDX', 'SEDAYU', '20'],
+            ['LV 04 - BM 8233 QJ', 'Mitsubishi Triton SC HDX', 'SEDAYU', '20'],
+            ['LV 05 - BM 8243 QJ', 'Mitsubishi Triton DC GLS', 'SEDAYU', '20'],
+            ['LV 06 - BM 8244 QJ', 'Mitsubishi Triton DC GLS', 'SEDAYU', '20'],
+            ['LV 07 - BM 8240 QJ', 'Mitsubishi Triton DC GLS', 'SEDAYU', '20'],
+            ['LV 08 - BM 8239 QJ', 'Mitsubishi Triton DC GLS', 'SEDAYU', '20'],
+            ['LV 12 - BM 8238 QJ', 'Mitsubishi Triton DC GLS', 'SEDAYU', '20'],
+            ['LV 13 - BM 8247 QJ', 'Isuzu NLR Mikrobus', 'SEDAYU', '20'],
+            ['LV 14 - BM 8246 QJ', 'Mitsubishi Triton DC GLS', 'SEDAYU', '20'],
+            ['LV 15 - BM 8245 QJ', 'Mitsubishi Triton DC GLS', 'SEDAYU', '20'],
+            ['LV 16 - BM 8242 QJ', 'Mitsubishi Triton DC GLS', 'SEDAYU', '20'],
+            ['LV 17 - BM 8241 QJ', 'Mitsubishi Triton DC GLS', 'SEDAYU', '20'],
+            ['LV 18 - BM 8232 QJ', 'Mitsubishi Triton DC GLS', 'SEDAYU', '20'],
+            ['LV 19 - BM 8231 QJ', 'Mitsubishi Triton DC GLS', 'SEDAYU', '20'],
+            ['LV 20 - BM 8230 QJ', 'Mitsubishi Triton DC GLS', 'SEDAYU', '20'],
+            ['LV 21 - BM 8229 QJ', 'Mitsubishi Triton DC GLS', 'SEDAYU', '20'],
+            ['LV 22 - BM 8228 QJ', 'Mitsubishi Triton DC GLS', 'SEDAYU', '20'],
+            ['LV 23 - BM 8227 QJ', 'Mitsubishi Triton DC GLS', 'SEDAYU', '20'],
+            ['LV 24 - BM 8226 QJ', 'Mitsubishi Triton DC GLS', 'SEDAYU', '20'],
+            ['LV 25 - BM 8225 QJ', 'Mitsubishi Triton DC GLS', 'SEDAYU', '20'],
+            ['LV 26 - BM 8602 QJ', 'Mitsubishi Triton DC GLS', 'SEDAYU', '20'],
+            ['LV 27 - BM 8692 QJ', 'Mitsubishi Triton DC GLS', 'SEDAYU', '20'],
+            ['LV 28 - BM 8489 QJ', 'Mitsubishi Triton DC HDX', 'SEDAYU', '20'],
+
+
         ];
 
         foreach ($units as $unit) {
