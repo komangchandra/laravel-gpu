@@ -9,7 +9,7 @@ class TransactionController extends Controller
 {
     public function index()
     {
-        $transactions = Transaction::with(['unit'])->get();
+        $transactions = Transaction::all();
         // dd($transactions);
         return view('dashboard.transactions.index', compact('transactions'));
     }

@@ -15,8 +15,6 @@ return new class extends Migration
             $table->id();
             $table->string('fuel_truck_id');
             $table->string('fuel_truck_name');
-            $table->integer('volume');
-            $table->integer('total_flow');
             $table->timestamps();
         });
     }

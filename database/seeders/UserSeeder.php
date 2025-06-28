@@ -24,7 +24,7 @@ class UserSeeder extends Seeder
             ['suhidin', 'suhidin@gmail.com', 'gpu2025', false],
             ['sabar', 'sabar@gmail.com', 'gpu2025', false],
             ['tarman', 'tarman@gmail.com', 'gpu2025', false],
-            ['Purchesing GPU', 'purchesing@gmail.com', 'gpu2025', false],
+            ['Purchasing GPU', 'purchasing@gmail.com', 'gpu2025', false],
         ];
 
         foreach ($users as $user) {

@@ -18,15 +18,18 @@ class ApiTransactionController extends Controller
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'time' => 'required',
+            'datetime' => 'required',
             'hm' => 'required',
             'vol' => 'required',
             'initial_flow' => 'required',
             'final_flow' => 'required',
             'driver' => 'required',
             'location' => 'required',
-            'user_id' => 'required',
-            'unit_id' => 'required',
+            'username' => 'required',
+            'unit' => 'required',
+            'no_lambung' => 'required',
+            'owner' => 'required',
+            'fuel_truck' => 'required',
         ]);
 
         if ($validator->fails()) {
@@ -34,15 +37,18 @@ class ApiTransactionController extends Controller
         }
 
         $transaction = Transaction::create([
-            'time' => $request->time,
+            'datetime' => $request->datetime,
             'hm' => $request->hm,
             'vol' => $request->vol,
             'initial_flow' => $request->initial_flow,
             'final_flow' => $request->final_flow,
             'driver' => $request->driver,
             'location' => $request->location,
-            'user_id' => $request->user_id,
-            'unit_id' => $request->unit_id,
+            'username' => $request->username,
+            'unit' => $request->unit,
+            'no_lambung' => $request->no_lambung,
+            'owner' => $request->owner,
+            'fuel_truck' => $request->fuel_truck,
         ]);
 
         return new TransactionResource('Success', 'Transaksi berhasil', $transaction);

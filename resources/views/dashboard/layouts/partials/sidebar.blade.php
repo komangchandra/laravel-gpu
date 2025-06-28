@@ -43,7 +43,7 @@
     </div>
   </li>  --}}
 
-  <li class="nav-item {{ Request::is('dashboard/units*') ? 'active' : '' }}">
+  {{-- <li class="nav-item {{ Request::is('dashboard/units*') ? 'active' : '' }}">
     <a class="nav-link" href="{{ route('units.index') }}">
       <i class="fas fa-fw fa-cogs"></i>
       <span>Data Unit</span></a>
@@ -59,7 +59,7 @@
     <a class="nav-link" href="{{ route('users.index') }}">
       <i class="fas fa-fw fa-user"></i>
       <span>Data Fuel Man</span></a>
-  </li> 
+  </li>  --}}
 
   <li class="nav-item {{ Request::is('dashboard/transactions*') ? 'active' : '' }}">
     <a class="nav-link" href="{{ route('transactions.index') }}">

@@ -8,6 +8,10 @@ class Transaction extends Model
 {
     protected $guarded = [];
 
+    protected $casts = [
+        'datetime' => 'datetime',
+    ];
+
     public function unit()
     {
         return $this->belongsTo(Unit::class);

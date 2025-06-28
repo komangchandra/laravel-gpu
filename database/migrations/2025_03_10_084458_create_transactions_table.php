@@ -13,16 +13,18 @@ return new class extends Migration
     {
         Schema::create('transactions', function (Blueprint $table) {
             $table->id();
-            $table->string('time');
-            $table->string('hm');
+            $table->dateTime('datetime');
+            $table->decimal('hm');
             $table->string('vol');
-            $table->string('initial_flow');
-            $table->string('final_flow');
+            $table->integer('initial_flow');
+            $table->integer('final_flow');
             $table->string('driver');
             $table->string('location');
-            $table->foreignId('user_id');
-            $table->foreignId('unit_id');
-            // $table->foreignId('fuel_truck_id');
+            $table->string('username');
+            $table->string('unit');
+            $table->string('no_lambung');
+            $table->string('owner');
+            $table->string('fuel_truck');
             $table->timestamps();
         });
     }

@@ -26,15 +26,12 @@
           <thead>
             <tr>
               <th>#</th>
-              <th>No Unit</th>
-              <th>Divisi</th>
+              <th>Tanggal</th>
               <th>Jam</th>
-              <th>HM</th>
+              <th>Nomor Lambung</th>
+              <th>Unit</th>
+              <th>Vendor</th>
               <th>Vol</th>
-              <th>Flow Awal</th>
-              <th>Flow Akhir</th>
-              <th>Fuel Man</th>
-              <th>Driver</th>
               <th>Lokasi</th>
               <th>##</th>
             </tr>
@@ -42,15 +39,12 @@
           <tfoot>
             <tr>
               <th>#</th>
-              <th>No Unit</th>
-              <th>Divisi</th>
+              <th>Tanggal</th>
               <th>Jam</th>
-              <th>HM</th>
+              <th>Nomor Lambung</th>
+              <th>Unit</th>
+              <th>Vendor</th>
               <th>Vol</th>
-              <th>Flow Awal</th>
-              <th>Flow Akhir</th>
-              <th>Fuel Man</th>
-              <th>Driver</th>
               <th>Lokasi</th>
               <th>##</th>
             </tr>
@@ -59,24 +53,21 @@
             @forelse ($transactions as $transaction)
               <tr>
                 <td>{{ $loop->iteration }}</td>
-                <td>{{ $transaction->unit->unit_id }}</td>
-                <td>{{ $transaction->unit->owner }}</td>
-                <td>{{ $transaction->time }}</td>
-                <td>{{ $transaction->hm }}</td>
+                <td>{{ $transaction->datetime->format('d-M-Y') }}</td>
+                <td>{{ $transaction->datetime->format('H:i') }}</td>
+                <td>{{ $transaction->no_lambung }}</td>
+                <td>{{ $transaction->unit }}</td>
+                <td>{{ $transaction->owner }}</td>
                 <td>{{ $transaction->vol }}</td>
-                <td>{{ $transaction->initial_flow }}</td>
-                <td>{{ $transaction->final_flow }}</td>
-                <td>{{ $transaction->user->name }}</td>
-                <td>{{ $transaction->driver }}</td>
                 <td>{{ $transaction->location }}</td>
                 <td>
                   <form onsubmit="return confirm('Yakin ingin menghapus data?');"
                     action="" method="POST">
-                    <a href="" class="btn btn-sm btn-warning"><i
-                        class="fa fa-pencil-alt"></i></a>
+                    <a href="" class="btn btn-sm btn-success"><i
+                        class="fa fa-eye"></i></a>
                     @csrf
-                    @method('DELETE')
-                    <button type="submit" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></button>
+                    {{-- @method('DELETE') --}}
+                    {{-- <button type="submit" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></button> --}}
                   </form>
 
                   {{-- <form onsubmit="return confirm('Yakin ingin menghapus data?');"
