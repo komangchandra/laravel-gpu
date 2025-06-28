@@ -14,7 +14,7 @@ class UserSeeder extends Seeder
     public function run(): void
     {
         $users = [
-            ['Admin', 'admin@gmail.com', 'admintampansekali123', true],
+            ['Admin', 'admin@gmail.com', 'Empire88556677!', true],
             ['afandi', 'afandi@gmail.com', 'gpu2025', false],
             ['agus', 'agus@gmail.com', 'gpu2025', false],
             ['herlambang', 'herlambang@gmail.com', 'gpu2025', false],
